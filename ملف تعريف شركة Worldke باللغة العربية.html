@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وورلدكي - ملف تعريف الشركة</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet">
+
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'Cairo', Arial, sans-serif;
+        direction: rtl;
+        text-align: right;
+        background-color: #f0f4ff;
+        color: #1a1a2e;
+        line-height: 1.9;
+        font-size: 15px;
+      }
+
+      /* ===== PAGE WRAPPER ===== */
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto 20px auto;
+        background: #fff;
+        box-shadow: 0 4px 30px rgba(0,0,0,0.12);
+        position: relative;
+        overflow: hidden;
+        page-break-after: always;
+        break-after: page;
+      }
+
+      /* ===== COVER PAGE ===== */
+      .cover-page {
+        background: linear-gradient(145deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 50px;
+        text-align: center;
+        position: relative;
+      }
+
+      .cover-circle-1 {
+        position: absolute;
+        top: -80px; left: -80px;
+        width: 300px; height: 300px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.04);
+        border: 2px solid rgba(255,255,255,0.08);
+      }
+      .cover-circle-2 {
+        position: absolute;
+        bottom: -100px; right: -100px;
+        width: 400px; height: 400px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.03);
+        border: 2px solid rgba(255,255,255,0.07);
+      }
+      .cover-circle-3 {
+        position: absolute;
+        top: 40%; left: -60px;
+        width: 200px; height: 200px;
+        border-radius: 50%;
+        background: rgba(245,158,11,0.08);
+      }
+      .cover-dots {
+        position: absolute;
+        top: 30px; right: 30px;
+        width: 100px; height: 100px;
+        background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+        background-size: 12px 12px;
+      }
+
+      .cover-logo-wrap {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 20px;
+        padding: 24px 40px;
+        margin-bottom: 40px;
+        z-index: 1;
+      }
+
+      .cover-logo {
+        max-width: 280px;
+        height: auto;
+        display: block;
+      }
+
+      .cover-divider {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #f59e0b, #fbbf24);
+        border-radius: 2px;
+        margin: 20px auto;
+        z-index: 1;
+      }
+
+      .cover-company-ar {
+        font-size: 3.2rem;
+        font-weight: 900;
+        color: #ffffff;
+        letter-spacing: 2px;
+        z-index: 1;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      }
+
+      .cover-subtitle {
+        font-size: 1.3rem;
+        color: #93c5fd;
+        margin-top: 10px;
+        z-index: 1;
+        font-weight: 600;
+      }
+
+      .cover-tagline-badge {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        color: #ffffff;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-top: 30px;
+        z-index: 1;
+        box-shadow: 0 4px 15px rgba(245,158,11,0.4);
+      }
+
+      .cover-year-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        background: rgba(255,255,255,0.08);
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding: 16px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(255,255,255,0.7);
+        font-size: 0.9rem;
+        z-index: 1;
+      }
+
+      .cover-stats {
+        display: flex;
+        gap: 40px;
+        margin-top: 40px;
+        z-index: 1;
+      }
+
+      .cover-stat {
+        text-align: center;
+      }
+
+      .cover-stat-num {
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: #f59e0b;
+        display: block;
+      }
+
+      .cover-stat-label {
+        font-size: 0.8rem;
+        color: rgba(255,255,255,0.7);
+      }
+
+      /* ===== INNER PAGE HEADER ===== */
+      .page-header {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .page-header-logo {
+        height: 36px;
+        filter: brightness(0) invert(1);
+        opacity: 0.9;
+      }
+
+      .page-header-title {
+        color: rgba(255,255,255,0.7);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+
+      /* ===== PAGE CONTENT ===== */
+      .page-content {
+        padding: 35px 45px 80px 45px;
+      }
+
+      /* ===== SECTION HEADING ===== */
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .section-heading h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #0f172a;
+        margin-bottom: 4px;
+      }
+
+      .section-heading .en-title {
+        font-size: 0.85rem;
+        color: #3b82f6;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .section-heading-bar {
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+        border-radius: 2px;
+        margin-top: 10px;
+      }
+
+      /* ===== CONTENT CARDS ===== */
+      .service-card {
+        background: #f8faff;
+        border-radius: 12px;
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 16px;
+        border-right: 4px solid #1e3a8a;
+        transition: all 0.2s;
+      }
+
+      .service-card.gold {
+        border-right-color: #f59e0b;
+        background: #fffbf0;
+      }
+
+      .service-card h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1e3a8a;
+        margin-bottom: 8px;
+      }
+
+      .service-card p {
+        font-size: 0.92rem;
+        color: #374151;
+        line-height: 1.8;
+        margin: 0;
+        text-align: justify;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      /* ===== VALUE CARDS ===== */
+      .value-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 18px;
+        border: 1px solid #e0e7ff;
+        box-shadow: 0 2px 8px rgba(30,58,138,0.06);
+        margin-bottom: 12px;
+      }
+
+      .value-card h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #1e3a8a;
+        margin-bottom: 6px;
+      }
+
+      .value-card p {
+        font-size: 0.88rem;
+        color: #4b5563;
+        line-height: 1.75;
+        margin: 0;
+        text-align: justify;
+      }
+
+      .value-number {
+        display: inline-block;
+        width: 30px; height: 30px;
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-left: 10px;
+        float: left;
+        margin-top: 3px;
+      }
+
+      /* ===== STATS BAR ===== */
+      .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin: 20px 0;
+      }
+
+      .stat-box {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
+        color: white;
+      }
+
+      .stat-box-num {
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: #fbbf24;
+        display: block;
+        line-height: 1.2;
+      }
+
+      .stat-box-label {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.85);
+        margin-top: 4px;
+      }
+
+      /* ===== TOC ===== */
+      .toc-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+        border-bottom: 1px dashed #e0e7ff;
+        font-size: 1rem;
+        transition: background 0.2s;
+      }
+
+      .toc-item:nth-child(odd) {
+        background: #f8faff;
+        border-radius: 6px;
+      }
+
+      .toc-num {
+        background: #1e3a8a;
+        color: white;
+        width: 28px; height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-left: 12px;
+      }
+
+      .toc-page {
+        color: #3b82f6;
+        font-weight: 700;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+
+      /* ===== CONTACT CARDS ===== */
+      .contact-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        background: #f0f4ff;
+        border-radius: 12px;
+        padding: 18px;
+        margin-bottom: 14px;
+        direction: rtl;
+      }
+
+      .contact-icon {
+        width: 48px; height: 48px;
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        color: white;
+      }
+
+      .contact-text-label {
+        font-size: 0.8rem;
+        color: #6b7280;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .contact-text-value {
+        font-size: 0.95rem;
+        color: #0f172a;
+        font-weight: 700;
+        direction: ltr;
+        text-align: left;
+      }
+
+      /* ===== MISSION / VISION ===== */
+      .mv-box {
+        background: linear-gradient(135deg, #f0f7ff, #e0ecff);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 20px;
+        border-top: 4px solid #1e3a8a;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mv-box.vision {
+        background: linear-gradient(135deg, #fffbf0, #fef3c7);
+        border-top-color: #f59e0b;
+      }
+
+      .mv-box::before {
+        content: '';
+        position: absolute;
+        top: -30px; left: -30px;
+        width: 120px; height: 120px;
+        border-radius: 50%;
+        background: rgba(30,58,138,0.05);
+      }
+
+      .mv-box h3 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #1e3a8a;
+        margin-bottom: 12px;
+        position: relative;
+      }
+
+      .mv-box.vision h3 { color: #92400e; }
+
+      .mv-box p {
+        font-size: 0.93rem;
+        color: #374151;
+        line-height: 1.85;
+        text-align: justify;
+        position: relative;
+        margin: 0;
+      }
+
+      /* ===== PAGE FOOTER ===== */
+      .page-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        padding: 12px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(255,255,255,0.6);
+        font-size: 0.75rem;
+      }
+
+      .page-footer .footer-brand {
+        color: rgba(255,255,255,0.9);
+        font-weight: 600;
+      }
+
+      /* ===== PRINT ===== */
+      @media print {
+        body { background: white; }
+        .page {
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+          break-after: page;
+          width: 100%;
+        }
+      }
+
+      /* ===== PROJECT CARD ===== */
+      .project-card {
+        background: #fff;
+        border: 1px solid #e0e7ff;
+        border-radius: 14px;
+        padding: 22px;
+        margin-bottom: 18px;
+        box-shadow: 0 3px 12px rgba(30,58,138,0.07);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(180deg, #1e3a8a, #3b82f6);
+      }
+
+      .project-card h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 10px;
+      }
+
+      .project-card p {
+        font-size: 0.9rem;
+        color: #4b5563;
+        line-height: 1.8;
+        text-align: justify;
+        margin: 0;
+      }
+
+      .project-tag {
+        display: inline-block;
+        background: #e0e7ff;
+        color: #1e3a8a;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-left: 5px;
+      }
+
+      /* ===== GOAL CARD ===== */
+      .goal-card {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        background: #f8faff;
+        border-radius: 12px;
+        padding: 18px;
+        margin-bottom: 14px;
+        border: 1px solid #e0e7ff;
+      }
+
+      .goal-num {
+        width: 42px; height: 42px;
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 900;
+        flex-shrink: 0;
+      }
+
+      .goal-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #1e3a8a;
+        margin-bottom: 6px;
+      }
+
+      .goal-card p {
+        font-size: 0.88rem;
+        color: #374151;
+        line-height: 1.75;
+        margin: 0;
+        text-align: justify;
+      }
+
+      /* ===== BODY INTRO TEXT ===== */
+      .intro-text {
+        font-size: 1rem;
+        color: #374151;
+        line-height: 1.9;
+        text-align: justify;
+        margin-bottom: 20px;
+        padding: 16px 20px;
+        background: #f8faff;
+        border-radius: 10px;
+        border-right: 3px solid #3b82f6;
+      }
+
+      ul.styled-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      ul.styled-list li {
+        padding: 8px 16px 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.93rem;
+        color: #374151;
+        position: relative;
+      }
+
+      ul.styled-list li::before {
+        content: '◆';
+        color: #1e3a8a;
+        font-size: 0.6rem;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body style="">
+    <!-- PAGE 1: COVER PAGE -->
+    <div class="page cover-page">
+      <div class="cover-circle-1"></div>
+      <div class="cover-circle-2"></div>
+      <div class="cover-circle-3"></div>
+      <div class="cover-dots"></div>
+
+      <div class="cover-logo-wrap">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" alt="Worldke Logo" class="cover-logo" data-height-listener-added="true">
+      </div>
+
+      <div class="cover-company-ar">وورلدكي</div>
+      <div class="cover-subtitle">وكالة التسويق الرقمي الرائدة</div>
+      <div class="cover-divider"></div>
+      <div class="cover-tagline-badge">✦ خبرة تمتد لأكثر من 12 عاماً في التسويق الرقمي ✦</div>
+
+      <div class="cover-stats">
+        <div class="cover-stat">
+          <span class="cover-stat-num">12+</span>
+          <span class="cover-stat-label">سنة خبرة</span>
+        </div>
+        <div class="cover-stat">
+          <span class="cover-stat-num">500+</span>
+          <span class="cover-stat-label">مشروع منجز</span>
+        </div>
+        <div class="cover-stat">
+          <span class="cover-stat-num">200+</span>
+          <span class="cover-stat-label">عميل راضٍ</span>
+        </div>
+        <div class="cover-stat">
+          <span class="cover-stat-num">6</span>
+          <span class="cover-stat-label">خدمات متكاملة</span>
+        </div>
+      </div>
+
+      <div class="cover-year-bar">
+        <span>© 2026 Worldke Digital Marketing Agency</span>
+        <span style="color:white; font-weight:700;">ملف تعريف الشركة</span>
+        <span dir="ltr">www.worldke.com.pk</span>
+      </div>
+    </div>
+
+    <!-- PAGE 2: TABLE OF CONTENTS -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">TABLE OF CONTENTS</div>
+          <h2>جدول المحتويات</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="toc-item"><span><span class="toc-num">١</span> من نحن</span><span class="toc-page">03</span></div>
+        <div class="toc-item"><span><span class="toc-num">٢</span> رحلتنا</span><span class="toc-page">04</span></div>
+        <div class="toc-item"><span><span class="toc-num">٣</span> رؤيتنا ومهمتنا</span><span class="toc-page">05</span></div>
+        <div class="toc-item"><span><span class="toc-num">٤</span> قيمنا الأساسية</span><span class="toc-page">06</span></div>
+        <div class="toc-item"><span><span class="toc-num">٥</span> لماذا باكستان؟</span><span class="toc-page">07</span></div>
+        <div class="toc-item"><span><span class="toc-num">٦</span> أهدافنا الاستراتيجية</span><span class="toc-page">08</span></div>
+        <div class="toc-item"><span><span class="toc-num">٧</span> خدمات تطوير المواقع الإلكترونية</span><span class="toc-page">09</span></div>
+        <div class="toc-item"><span><span class="toc-num">٨</span> خدمات تطوير تطبيقات الجوال</span><span class="toc-page">10</span></div>
+        <div class="toc-item"><span><span class="toc-num">٩</span> خدمات التسويق الرقمي</span><span class="toc-page">11</span></div>
+        <div class="toc-item"><span><span class="toc-num">١٠</span> خدمات استشارات تكنولوجيا المعلومات</span><span class="toc-page">12</span></div>
+        <div class="toc-item"><span><span class="toc-num">١١</span> تطوير الشركات الناشئة</span><span class="toc-page">13</span></div>
+        <div class="toc-item"><span><span class="toc-num">١٢</span> مشاريعنا</span><span class="toc-page">14</span></div>
+        <div class="toc-item"><span><span class="toc-num">١٣</span> تواصل معنا</span><span class="toc-page">15</span></div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>02</span>
+      </div>
+    </div>
+
+    <!-- PAGE 3: WHO WE ARE -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">WHO WE ARE</div>
+          <h2>من نحن</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text">
+          وورلدكي هي وكالة تسويق رقمي حائزة على جوائز، تقدم مجموعة متنوعة من خدمات التسويق الرقمي المبنية على البيانات. نحن متخصصون في الاستراتيجيات التي تعزز التواجد الإلكتروني وترتقي بالعلامات التجارية إلى آفاق جديدة في المشهد الرقمي.
+        </div>
+
+        <div class="service-card">
+          <h3>🤝 نحن نبني الروابط ونحقق النتائج</h3>
+          <p>
+            تأسست وورلدكي على مبدأ بناء روابط حقيقية وتحقيق نتائج ملموسة. ندرك أن في عصرنا الرقمي، الروابط الحقيقية هي أساس النجاح. سواء أكان ذلك في ربط علامتك التجارية بالجمهور المناسب أو تعزيز العلاقات داخل فريقنا، فإننا نؤمن بأن الروابط هي المحرك الأساسي للنمو. استراتيجياتنا مصممة لسد الفجوة بين عملك وأهدافه، مما يضمن أن كل جهد يؤدي إلى نتائج ملموسة وقابلة للقياس.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>🎯 نحن خبراء التسويق الرقمي</h3>
+          <p>
+            نفخر بكوننا خبراء في التسويق الرقمي، نتعامل مع العالم الرقمي بكفاءة واحتراف. فريقنا من المحترفين يمتلك فهماً عميقاً للمشهد الرقمي المتطور باستمرار، من استراتيجيات تحسين محركات البحث (SEO) التي ترتقي بالعلامات التجارية إلى قمة نتائج البحث، إلى صياغة محتوى جذاب يشرك ويحول. نحن لا نتبع التوجهات فحسب؛ بل نصنعها.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>📊 وكالة مدفوعة بالنتائج</h3>
+          <p>
+            تبرز وورلدكي كوكالة تسويق رقمي مدفوعة بالنتائج، حيث النجاح ليس مجرد طموح؛ بل هو التزام. تركيزنا الثابت يكمن في تقديم نتائج قابلة للقياس تدفع عملك إلى الأمام. من زيادة حركة المرور على الموقع وتعزيز ظهور العلامة التجارية إلى رفع معدلات التحويل وعائد الاستثمار، يتحدث سجلنا الحافل عن تفانينا في تقديم نتائج حقيقية ومؤثرة لكل عميل نتعاون معه.
+          </p>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>03</span>
+      </div>
+    </div>
+
+    <!-- PAGE 4: OUR JOURNEY -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">OUR JOURNEY</div>
+          <h2>رحلتنا</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text">
+          <strong>أكثر من 12 عاماً من الخبرة المهنية</strong><br>
+          ازدهرت وورلدكي على مدار 12 عاماً، متطورةً ومتكيفةً مع المشهد الرقمي المتغير باستمرار. تعكس هذه الرحلة التزامنا بالنمو والابتكار والتميز.
+        </div>
+
+        <div class="service-card">
+          <h3>🚀 التطور الرقمي — Digital Evolution</h3>
+          <p>
+            تطورت وورلدكي مواكبةً أحدث التوجهات الرقمية. تضمن استراتيجياتنا التكيفية تنافسية عملائنا، مستندةً إلى خبرة غنية وتقديم حلول مبتكرة تتجاوز التوقعات. بشبكتنا العالمية من الخبراء، نساعد الشركات على تحقيق النجاح ورسم مسار واضح نحو التميز الرقمي.
+          </p>
+        </div>
+
+        <div class="service-card gold">
+          <h3>⭐ التميز المتمحور حول العميل — Client-Centric Excellence</h3>
+          <p>
+            بنينا شراكات دائمة من خلال أساليب متخصصة وتواصل واضح ونتائج ثابتة. هذا الأساس يحفزنا نحو الاستمرار في النجاح وقيادة الصناعة. التزامنا بالتميز يغذي عزمنا على ريادة معايير جديدة وتقديم قيمة استثنائية لكل عميل.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>💡 الأثر الابتكاري — Innovative Impact</h3>
+          <p>
+            من خلال تقديم خدمات متطورة والبقاء على اتصال بمستجدات الصناعة، نحافظ على سمعتنا كرواد في عالم التسويق الرقمي. تضمن تفانينا تحقيق عملائنا لنتائج استثنائية، مما يجعلنا قوة دافعة في رحلة نموهم ومسيرتهم نحو النجاح الرقمي.
+          </p>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>04</span>
+      </div>
+    </div>
+
+    <!-- PAGE 5: MISSION & VISION -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">MISSION &amp; VISION</div>
+          <h2>رؤيتنا ومهمتنا</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="mv-box">
+          <h3>🎯 مهمتنا — Our Mission</h3>
+          <p>
+            تحقيق نتائج قابلة للقياس تدفع عملك إلى الأمام. من خلال مزيج دقيق من التخطيط الاستراتيجي وتحليل البيانات والإبداع، نترجم جهود التسويق الرقمي إلى إنجازات ملموسة. من زيادة حركة الزيارات إلى تعزيز ظهور العلامة التجارية ورفع معدلات التحويل وعائد الاستثمار، سجلنا الحافل يتحدث عن تفانينا في تقديم نتائج حقيقية لكل شريك نتعامل معه.
+          </p>
+        </div>
+
+        <div class="mv-box vision">
+          <h3>🌟 رؤيتنا — Our Vision</h3>
+          <p>
+            أن نكون وكالة التسويق الرقمي الأولى عالمياً، نقود التحول الرقمي للشركات من خلال حلول مبتكرة ومبنية على البيانات، محققين نمواً مستداماً لعملائنا وتأثيراً إيجابياً في المجتمع الرقمي. نسعى إلى بناء مستقبل رقمي أكثر ابتكاراً وازدهاراً للشركات الطموحة في جميع أنحاء العالم.
+          </p>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 14px; padding: 22px; color: white; margin-top: 20px;">
+          <h3 style="color: #fbbf24; margin-bottom: 14px; font-size: 1.1rem;">نهجنا القائم على البيانات</h3>
+          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.85; text-align: justify; margin: 0;">
+            في وورلدكي، ندرك أن النتائج تهم أكثر من أي وقت مضى في المشهد الرقمي المتطور. كوكالة مدفوعة بالنتائج، نصمم مناهجنا لتناسب أهدافك وتحدياتك الفريدة. تمتد كفاءة فريقنا عبر مجالات متنوعة — من تحسين محركات البحث والتسويق بالمحتوى إلى الإعلانات المدفوعة واستراتيجيات وسائل التواصل الاجتماعي. نضمن أن كل حملة نتولاها ليست مجرد تمرين إبداعي، بل رحلة هادفة نحو تحقيق نتائج ملموسة وذات معنى.
+          </p>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>05</span>
+      </div>
+    </div>
+
+    <!-- PAGE 6: CORE VALUES -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">WORLDKE CORE VALUES</div>
+          <h2>قيمنا الأساسية</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="service-grid">
+          <div class="value-card">
+            <h3><span class="value-number">١</span> الابتكار بلا حدود</h3>
+            <p style="clear:both; padding-top: 6px;">نتبنى الابتكار كقوة دافعة، نسعى باستمرار لاستكشاف آفاق جديدة في التسويق الرقمي. نزدهر بالاستراتيجيات الريادية التي تتحدى الأعراف، مما يضمن تميز عملائنا في المشهد الرقمي.</p>
+          </div>
+          <div class="value-card">
+            <h3><span class="value-number">٢</span> التميز للعميل</h3>
+            <p style="clear:both; padding-top: 6px;">نحترم عملاءنا واقتراحاتهم. نلتزم بفهم احتياجاتهم وطموحاتهم وتحدياتهم الفريدة، لصياغة حلول مخصصة تتجاوز التوقعات. نجاحنا مرتبط بنجاح عملائنا.</p>
+          </div>
+          <div class="value-card">
+            <h3><span class="value-number">٣</span> الدقة البيانية</h3>
+            <p style="clear:both; padding-top: 6px;">الدقة هي مفتاح العالم الرقمي، واعتمادنا على تحليل البيانات يضمن أن القرارات مبنية على رؤى قابلة للتنفيذ. نضبط الاستراتيجيات ونحسّن الحملات لتحقيق نتائج مثلى.</p>
+          </div>
+          <div class="value-card">
+            <h3><span class="value-number">٤</span> التآزر التعاوني</h3>
+            <p style="clear:both; padding-top: 6px;">نؤمن بقوة التعاون ودوره المحوري. من خلال بيئة تجمع المواهب المتنوعة، نضاعف الإبداع وحل المشكلات والابتكار، مما يؤدي إلى حلول ديناميكية تدفع النمو.</p>
+          </div>
+          <div class="value-card">
+            <h3><span class="value-number">٥</span> الأخلاق والنزاهة</h3>
+            <p style="clear:both; padding-top: 6px;">الالتزام بأعلى المعايير الأخلاقية أمر غير قابل للتفاوض. النزاهة توجه كل تفاعل وقرار، مما يضمن الشفافية والصدق والثقة في جميع مساعينا.</p>
+          </div>
+          <div class="value-card">
+            <h3><span class="value-number">٦</span> التكيف والرشاقة</h3>
+            <p style="clear:both; padding-top: 6px;">المشهد الرقمي في تطور مستمر، والرشاقة هي بوصلتنا. نتقبل التغيير بصدر رحب، متكيفين بسرعة مع التطورات التكنولوجية وتحولات السوق للبقاء في الطليعة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>06</span>
+      </div>
+    </div>
+
+    <!-- PAGE 7: WHY PAKISTAN -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">WHY PAKISTAN?</div>
+          <h2>لماذا باكستان؟</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text">
+          باكستان سوق رقمي متنامٍ بسرعة مع قاعدة كبيرة من المواهب التكنولوجية. تدعم الحكومة الباكستانية التحول الرقمي وتطوير الصناعات الإبداعية. مدينة كراتشي، مركز الأعمال الرئيسي في باكستان، تمتلك بيئة مثالية للوكالات الرقمية المبتكرة.
+        </div>
+
+        <div class="stats-bar">
+          <div class="stat-box">
+            <span class="stat-box-num">220+</span>
+            <span class="stat-box-label">مليون نسمة</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box-num">60%+</span>
+            <span class="stat-box-label">نسبة الشباب</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box-num">80+</span>
+            <span class="stat-box-label">مليون مستخدم إنترنت</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box-num">12+</span>
+            <span class="stat-box-label">عام خبرة وورلدكي</span>
+          </div>
+        </div>
+
+        <div class="service-card" style="margin-top: 18px;">
+          <h3>🌍 وورلدكي في طليعة التحول الرقمي الباكستاني</h3>
+          <p>
+            تقع وورلدكي في قلب كراتشي، العاصمة الاقتصادية لباكستان، حيث تزدهر بيئة الأعمال الرقمية. نستفيد من هذا الموقع الاستراتيجي لتقديم حلول رقمية مبتكرة للشركات الباكستانية والدولية على حد سواء. مع تنامي اعتماد باكستان على الاقتصاد الرقمي، تقف وورلدكي كشريك موثوق يرافق الشركات في رحلتها نحو النجاح الرقمي.
+          </p>
+        </div>
+
+        <div class="service-card gold">
+          <h3>📍 موقعنا — كراتشي، باكستان</h3>
+          <p>
+            Office No 102, 1st Floor, Plot No A/20, Jinnah Housing Society, Shahrah e Faisal, Karachi, 74500 — في قلب المركز الاقتصادي لباكستان، نخدم العملاء محلياً وعالمياً بكفاءة واحترافية عالية.
+          </p>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>07</span>
+      </div>
+    </div>
+
+    <!-- PAGE 8: STRATEGIC GOALS -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">STRATEGIC GOALS</div>
+          <h2>أهدافنا الاستراتيجية</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">١</div>
+          <div>
+            <h3>توسيع نطاق الخدمات</h3>
+            <p>تعزيز حضورنا في الأسواق الإقليمية والدولية، وتطوير حلول رقمية مبتكرة تلبي احتياجات العملاء المتطورة وتدفع نمو أعمالهم نحو الأمام.</p>
+          </div>
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">٢</div>
+          <div>
+            <h3>تحقيق التميز التقني</h3>
+            <p>الاستثمار المستمر في أحدث التقنيات والأدوات الرقمية لضمان تقديم أفضل الحلول لعملائنا والبقاء في طليعة المشهد الرقمي المتطور.</p>
+          </div>
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">٣</div>
+          <div>
+            <h3>بناء شراكات استراتيجية</h3>
+            <p>تطوير شراكات فعّالة مع الشركات الرائدة في مجال التكنولوجيا والتسويق الرقمي على المستوى العالمي لتوسيع نطاق خدماتنا وتعزيز قيمتنا المضافة للعملاء.</p>
+          </div>
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">٤</div>
+          <div>
+            <h3>تمكين المجتمع الرقمي</h3>
+            <p>دعم الشركات الناشئة والمؤسسات الصغيرة والمتوسطة في رحلتها نحو التحول الرقمي من خلال حلول مخصصة ومتاحة ومناسبة لميزانياتهم وأهدافهم.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>08</span>
+      </div>
+    </div>
+
+    <!-- PAGE 9: WEB DEVELOPMENT SERVICES -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">WEB DEVELOPMENT SERVICES</div>
+          <h2>خدمات تطوير المواقع الإلكترونية</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text">نقدم في وورلدكي مجموعة شاملة من خدمات تطوير المواقع الإلكترونية التي تجمع بين الجماليات وقوة الأداء لمنح عملك حضوراً رقمياً لا يُنسى.</div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>🎨 تصميم الواجهات</h3>
+            <p>واجهات جذابة وسهلة الاستخدام تعكس علامتك التجارية وتترك انطباعاً قوياً وتشرك الزوار بفعالية.</p>
+          </div>
+          <div class="service-card">
+            <h3>⚙️ مواقع PHP المخصصة</h3>
+            <p>مواقع ديناميكية مع أنظمة إدارة محتوى متقدمة ولوحات تحكم سهلة تتيح التحديث الفوري بلا خبرة تقنية.</p>
+          </div>
+          <div class="service-card">
+            <h3>🛒 مواقع التجارة الإلكترونية</h3>
+            <p>حلول متكاملة لعرض المنتجات مع بوابات دفع آمنة وفعّالة لتجربة تسوق سلسة وموثوقة.</p>
+          </div>
+          <div class="service-card">
+            <h3>🔧 تحسين الأداء والصيانة</h3>
+            <p>صيانة استباقية تشمل تحديثات الأمان والنسخ الاحتياطية لضمان عمل موقعك بكفاءة دائمة.</p>
+          </div>
+          <div class="service-card">
+            <h3>📊 تحليل الموقع الشامل</h3>
+            <p>رؤى مبنية على البيانات لفهم سلوك الزوار واتخاذ قرارات ذكية تحسّن تجربة المستخدم والنمو.</p>
+          </div>
+          <div class="service-card">
+            <h3>💻 التطوير الشامل Full Stack</h3>
+            <p>تطوير متكامل للواجهة الأمامية والخلفية مع تواصل مستمر لضمان تنفيذ رؤيتك بدقة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>09</span>
+      </div>
+    </div>
+
+    <!-- PAGE 10: MOBILE APP DEVELOPMENT -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">MOBILE APP DEVELOPMENT</div>
+          <h2>خدمات تطوير تطبيقات الجوال</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>📱 تطبيقات أصلية — Native</h3>
+            <p>تطبيقات مخصصة لمنصات محددة تحقق أقصى أداء وسهولة استخدام، سريعة واستجابية وغنية بالميزات.</p>
+          </div>
+          <div class="service-card">
+            <h3>🔀 متعدد المنصات — Cross-Platform</h3>
+            <p>تطبيقات تعمل بسلاسة عبر أجهزة وأنظمة مختلفة مع تحسين التكاليف وضمان تجارب مستخدم متسقة.</p>
+          </div>
+          <div class="service-card">
+            <h3>🏢 حلول المؤسسات — Enterprise</h3>
+            <p>تطبيقات مصممة لاحتياجاتك تبسّط العمليات وتعزز الإنتاجية مع التركيز على الأمان وقابلية التوسع.</p>
+          </div>
+          <div class="service-card">
+            <h3>🛍️ تجارة إلكترونية — E-Commerce</h3>
+            <p>تطبيقات تسوق ديناميكية تضاعف إمكانات متجرك وتشرك العملاء في أي وقت ومن أي مكان.</p>
+          </div>
+          <div class="service-card">
+            <h3>🌐 دمج إنترنت الأشياء — IoT</h3>
+            <p>حلول تسد الفجوة بين الأجهزة وتتيح التواصل الذكي والأتمتة لإدارة الأنظمة المترابطة.</p>
+          </div>
+          <div class="service-card">
+            <h3>🛠️ صيانة ودعم — Maintenance</h3>
+            <p>دعم مستمر وتحديثات منتظمة وإصلاح فوري للأخطاء لضمان أداء تطبيقك بشكل مثالي دائماً.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>10</span>
+      </div>
+    </div>
+
+    <!-- PAGE 11: DIGITAL MARKETING -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">DIGITAL MARKETING SERVICES</div>
+          <h2>خدمات التسويق الرقمي</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text">نقدم استراتيجيات تسويق رقمي مبنية على البيانات لتعزيز وجودك الإلكتروني وزيادة إيراداتك وربط علامتك التجارية بجمهورها المثالي.</div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px;">
+          <div class="service-card">
+            <h3>أ. الخدمات الأساسية</h3>
+            <ul class="styled-list">
+              <li>تحسين محركات البحث (SEO)</li>
+              <li>إدارة التواصل الاجتماعي</li>
+              <li>الإعلانات المدفوعة (PPC)</li>
+              <li>التسويق بالمحتوى</li>
+            </ul>
+          </div>
+          <div class="service-card gold">
+            <h3>ب. الخدمات المتخصصة</h3>
+            <ul class="styled-list">
+              <li>التسويق عبر البريد الإلكتروني</li>
+              <li>تحسين معدل التحويل (CRO)</li>
+              <li>إدارة سمعة العلامة التجارية</li>
+              <li>التحليلات والتقارير التفصيلية</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #1e3a8a, #1d4ed8); border-radius: 12px; padding: 20px; color: white;">
+          <h3 style="color: #fbbf24; margin-bottom: 14px; font-size: 1rem;">✅ لماذا تختار وورلدكي لتسويقك الرقمي؟</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.9);">📈 استراتيجيات مبنية على البيانات لأقصى عائد استثمار</div>
+            <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.9);">🌍 خبرة في جميع منصات التواصل الرئيسية</div>
+            <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.9);">📊 تقارير شفافة وقابلة للقياس</div>
+            <div style="background: rgba(255,255,255,0.08); border-radius: 8px; padding: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.9);">👥 فريق متخصص مخصص لكل خدمة</div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>11</span>
+      </div>
+    </div>
+
+    <!-- PAGE 12: IT CONSULTING -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">IT CONSULTING SERVICES</div>
+          <h2>خدمات استشارات تكنولوجيا المعلومات</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>🗺️ التخطيط التقني الاستراتيجي</h3>
+            <p>نرشد الشركات لاستخدام التكنولوجيا لتحقيق أهداف طويلة المدى عبر تحليل الأنظمة وإنشاء خارطة طريق للكفاءة والابتكار.</p>
+          </div>
+          <div class="service-card">
+            <h3>🏗️ تقييم وتحسين البنية التحتية</h3>
+            <p>تقييم شامل لأطر تكنولوجيا المعلومات مع إعادة بناء الأنظمة وتحسين الأمان وتبسيط العمليات لأقصى أداء.</p>
+          </div>
+          <div class="service-card">
+            <h3>📋 إدارة مشاريع تكنولوجيا المعلومات</h3>
+            <p>تنفيذ سلس للمبادرات التقنية بالتخطيط الدقيق والأساليب الرشيقة من تحديد الهدف إلى تخصيص الموارد.</p>
+          </div>
+          <div class="service-card">
+            <h3>🎓 التدريب ونقل المعرفة</h3>
+            <p>برامج شاملة تجمع النظرية والتطبيق لتزويد المحترفين بأحدث مهارات التكنولوجيا الرقمية.</p>
+          </div>
+          <div class="service-card">
+            <h3>💾 تطوير البرمجيات ودمجها</h3>
+            <p>حلول مخصصة تلبي احتياجات كل عميل مع ضمان قابلية التوسع والتكامل السلس بين الأنظمة المختلفة.</p>
+          </div>
+          <div class="service-card">
+            <h3>🔄 استراتيجية التحول الرقمي</h3>
+            <p>تحويل الأعمال بالتقنيات المتطورة عبر تقييم العمليات وتحديد الفرص الرقمية وتنفيذ الحلول الابتكارية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>12</span>
+      </div>
+    </div>
+
+    <!-- PAGE 13: STARTUP DEVELOPMENT -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">STARTUP DEVELOPMENT</div>
+          <h2>تطوير الشركات الناشئة</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text">
+          خبراؤنا المتمرسون على دراية بالتحديات الفريدة التي تواجهها الشركات الناشئة، من تحسين فكرتك إلى تأمين التمويل وإرساء حضور قوي في السوق. نرافقك في كل خطوة من رحلة نجاحك.
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">١</div>
+          <div>
+            <h3>تحسين نموذج الأعمال</h3>
+            <p>مساعدة الشركات الناشئة في تحسين نموذج أعمالها وصياغة عرض قيمة فريد ومقنع يتميز في السوق ويجذب العملاء والمستثمرين على حد سواء.</p>
+          </div>
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">٢</div>
+          <div>
+            <h3>التسويق الرقمي للشركات الناشئة</h3>
+            <p>بناء حضور رقمي قوي من الصفر من خلال استراتيجيات تسويق مبتكرة وذكية مناسبة للميزانيات المحدودة مع تحقيق أقصى أثر ممكن.</p>
+          </div>
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">٣</div>
+          <div>
+            <h3>تطوير الهوية البصرية</h3>
+            <p>إنشاء هوية بصرية احترافية وجذابة تعكس رؤية الشركة وتميّزها في السوق وتجذب العملاء المستهدفين بقوة وثقة.</p>
+          </div>
+        </div>
+
+        <div class="goal-card">
+          <div class="goal-num">٤</div>
+          <div>
+            <h3>استشارات النمو المستدام</h3>
+            <p>تقديم استشارات استراتيجية مستمرة لمساعدة الشركات الناشئة على التوسع الذكي والنمو المستدام عبر مراحل تطورها المختلفة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>13</span>
+      </div>
+    </div>
+
+    <!-- PAGE 14: PROJECTS -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">OUR PROJECTS</div>
+          <h2>مشاريعنا</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text" style="text-align: center;">وورلدكي — رفع العلامات التجارية من خلال التسويق الرقمي الذكي والمبني على البيانات</div>
+
+        <div class="project-card">
+          <h3>TowingKey</h3>
+          <p>وضعت وورلدكي استراتيجية تسويق رقمي شاملة تشمل عدة عناصر رئيسية. تضمنت إجراء بحث شامل للكلمات المفتاحية وتطبيق تحسينات SEO على الصفحة لتحسين ترتيب محركات البحث. كما جرى إعادة تصميم الموقع لتحسين تجربة المستخدم ومواءمته مع هوية بصرية متسقة. وقد صيغت استراتيجية محتوى لتقديم معلومات قيّمة وترسيخ سلطة الصناعة.</p>
+          <div><span class="project-tag">العلامة التجارية</span><span class="project-tag">التطوير</span><span class="project-tag">SEO</span></div>
+        </div>
+
+        <div class="project-card">
+          <h3>TowingBee</h3>
+          <p>أجرينا فحصاً شاملاً لمنافسي TowingBee واستراتيجياتهم. من خلال دراسة نقاط قوتهم وضعفهم ومناهجهم في السوق عن كثب، اكتسبنا رؤى قيمة توجّه قراراتنا وإجراءاتنا. أعطى هذا التحليل ميزة تنافسية وفهماً أوضح لكيفية تموضع العلامة التجارية بسرعة وفعالية في السوق المتنافس.</p>
+          <div><span class="project-tag">العلامة التجارية</span><span class="project-tag">التطوير</span><span class="project-tag">تحليل المنافسين</span></div>
+        </div>
+
+        <div class="project-card">
+          <h3>RiteWay Towing &amp; Recovery</h3>
+          <p>ركزت استراتيجيتنا على تحقيق هيمنة SEO المحلية، مما دفع ظهور الشركة داخل صناعة السحب التنافسية في نيويورك. حسّنّا Google My Business، وأنشأنا قوائم أعمال متسقة، وصغنا محتوى خاصاً بكل موقع، ودمجنا الكلمات المفتاحية المحلية بشكل استراتيجي. وعبر بناء روابط أخلاقية، عززنا السلطة المحلية للشركة.</p>
+          <div><span class="project-tag">SEO المحلي</span><span class="project-tag">Google My Business</span><span class="project-tag">بناء الروابط</span></div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>14</span>
+      </div>
+    </div>
+
+    <!-- PAGE 15: CONTACT US -->
+    <div class="page">
+      <div class="page-header">
+        <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" class="page-header-logo" alt="Worldke" data-height-listener-added="true">
+        <span class="page-header-title">ملف تعريف الشركة · 2026</span>
+      </div>
+      <div class="page-content">
+        <div class="section-heading">
+          <div class="en-title">CONTACT US</div>
+          <h2>تواصل معنا</h2>
+          <div class="section-heading-bar"></div>
+        </div>
+
+        <div class="intro-text" style="text-align: center; font-size: 1.05rem;">
+          نحن هنا لمساعدتك في تحقيق أهدافك الرقمية.<br>تواصل معنا اليوم ودعنا نبدأ رحلة نجاحك الرقمي معاً.
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-text-label">رقم الهاتف</div>
+            <div class="contact-text-value">(+92) 320 9255791</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-text-label">البريد الإلكتروني</div>
+            <div class="contact-text-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ddb4b3bbb29daab2afb1b9b6b8f3beb2b0f3adb6">[email&#160;protected]</a></div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-text-label">الموقع الإلكتروني</div>
+            <div class="contact-text-value">www.worldke.com.pk</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-text-label">العنوان</div>
+            <div class="contact-text-value">Office No 102, 1st Floor, Plot No A/20,<br>Jinnah Housing Society, Shahrah e Faisal,<br>Karachi, 74500 — Pakistan</div>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #0f172a, #1e3a8a); border-radius: 14px; padding: 28px; text-align: center; margin-top: 20px;">
+          <img src="https://sspark.genspark.ai/cfimages?u1=Q4pLv6MJZi%2Bwurxd4Cy%2F%2BEySjpsFisB1La54jFTEqPjcPVe9d7xp3c3RsdNySTv1zb1gMLs3p7xwo053b05c99lWuOYAfTdHBw%3D%3D&amp;u2=EgyWPsWRsMwax8Ph&amp;width=2560" style="max-width: 200px; height: auto; filter: brightness(0) invert(1); opacity: 0.9; margin-bottom: 12px; display: block; margin-left: auto; margin-right: auto;" alt="Worldke" data-height-listener-added="true">
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin: 0;">Worldke Digital Marketing Agency</p>
+        </div>
+      </div>
+      <div class="page-footer">
+        <span class="footer-brand">WORLDKE</span>
+        <span>وكالة التسويق الرقمي الرائدة · www.worldke.com.pk</span>
+        <span>15</span>
+      </div>
+    </div>
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body></html>
